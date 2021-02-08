@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Pompiere&display=swap');
+
+body{
+    background: #f5dcde;
+    margin: 0;
+    padding: 0;
+    font-family: 'Pompiere';
+}
+
+header{
+    height: 700px;
+}
+
+/*ÁREA DOS LINKS DE NAVEGAÇÃO*/
+.nav-topo{
+    background: #cc1e25;
+    margin: 0;
+    padding: 0;
+    box-shadow: 2px 2px 15px #e4969e;
+}
+
+
+.nav-topo ul{
+    margin-top: 0;
+    display: flex;
+}
+
+.nav-topo ul li{
+    position: relative;
+    padding: 20px;
+    margin: 5px 0;
+    list-style-type: none;
+}
+
+.nav-topo ul li a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+    font-size: 20pt;
+    padding: 5px 10px;
+}
+
+.nav-topo a:hover{
+    color: #e4818b;
+    border-bottom: 1px solid #ec98a0;
+}
+
+/*ÁREA DA LOGO*/
+
+#logo-site{
+    justify-content: center;
+    margin: auto;
+    height: 700px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+/*ÁREA CONTEUDISTA GERAL*/
+
+#conteudo{
+    background: #fff;
+    margin: 0;
+    padding: 30px;
+    text-align: center;
+    justify-content: center;
+    box-shadow: 2px 2px 15px #e4969e;
+}
+
+#conteudo h1{
+    font-size: 35pt;
+    font-weight: 700;
+    color: #cc1e25;
+}
+
+/*CONFIGURAÇÕES DA SESSÃO 'SOBRE'*/
+
+.area-sobre{
+    height: 600px;
+    display: flex;
+    padding: 50px;
+    justify-content: center;
+}
+
+#foto-sobre{
+    width: 200px;
+    height: 450px;
+    background: #cc1e25;
+    background-image: url(image/fundo-header.png);
+    box-shadow: 2px 2px 15px #000;
+    opacity: 0.8;
+}
+
+.conteudo-sobre{
+    background: #f5dcde;
+    width: 50%;
+    margin-top: 10px;
+    height: 450px;
+    box-shadow: 2px 3px 20px rgb(156, 140, 140);
+}
+
+.conteudo-sobre p{
+    text-align: justify;
+    padding: 20px;
+    font-size: 18pt;
+}
+
+/*CONFIGURAÇÕES DA SESSÃO 'SHOP'*/
+
+.area-shop{
+    margin: 0;
+    padding: 0;
+}
+
+.area-shop h1{
+    padding: 5px;
+    margin-top: 20px;
+}
+
+.area-shop p{
+    font-size: 20pt;
+}
+
+.area-shop h2{
+    text-align: center;
+    font-size: 18pt;
+    color: #cc1e25;
+}
+
+#sessao-shop{
+    display: flex;
+    position: relative;
+    margin: 30px;
+    justify-content: center;
+}
+
+.foto-shop{
+    margin: 0 20px;
+    border-radius: 50%;
+    height: 300px;
+    border: 2px solid #e4818b;
+}
+
+ul li{
+    list-style-type: none;
+    font-size: 20pt;
+}
+
+/*CONFIGURAÇÕES DA SESSÃO 'CONTATO'*/
+
+.sessao-contato{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contato-wrapper{
+    width: 60%;
+    height: 30rem;
+    display: flex;
+    box-shadow: 5px 5px 20px rgb(190, 167, 167);
+    
+}
+
+.contato-left{
+    width: 35%;
+    background-image: url(image/fundo-header.png);
+}
+
+.contato-right{
+    width: 65%;
+    background-color: #f5dcde;
+    padding: 3rem 5rem;
+}
+
+.sessao-contato h1{
+    font-family: var(--font-primary);
+    font-size: 3rem;
+    width: 100%;
+    text-align: center;
+    color: #e28339;
+    font-weight: lighter;
+}
+
+.sessao-contato form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group{
+    position: relative;
+
+}
+
+.input-group textarea{
+    padding-top: 0.3rem;
+    max-width: 25rem;
+    max-height: 3rem;
+}
+
+.field{
+    background: transparent;
+    border: none;
+    width: 20rem;
+    height: 2rem;
+    font-size: 1.2rem;
+    font-family: var(--font-secundary);
+    border-bottom: 1px dashed #bbbaba;
+    outline: none;
+    margin: 10px 0;
+    transition: all 0.3s;
+}
+
+.field-label{
+    position: absolute;
+    left: 0;
+    font-family: var(--font-secundary);
+    text-transform: uppercase;
+}
+
+.btn-submit{
+    background: #cc1e25;  
+    width: 100px;
+    line-height: 2em;
+    border-radius: 5px;
+    margin: auto;
+    font-family: var(--font-action);
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 12pt;
+    border: 1px solid #eee;
+    
+}
+
+footer{
+    background: #cc1e25;
+    margin: 0;
+    padding: 0;
+    height: 100px;
+    text-align: center;
+}
+
+footer p{
+   padding-top: 10px;
+
+
+}
+
+
+

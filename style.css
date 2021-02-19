@@ -1,48 +1,111 @@
 @import url('https://fonts.googleapis.com/css2?family=Pompiere&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Dancing+Script:wght@600&display=swap');
 
-body{
-    background: #f5dcde;
-    margin: 0;
-    padding: 0;
-    font-family: 'Pompiere';
-}
-
-header{
-    height: 700px;
-}
-
-/*ÁREA DOS LINKS DE NAVEGAÇÃO*/
-.nav-topo{
-    background: #cc1e25;
-    margin: 0;
-    padding: 0;
-    box-shadow: 2px 2px 15px #e4969e;
-}
-
-
-.nav-topo ul{
-    margin-top: 0;
-    display: flex;
-}
-
-.nav-topo ul li{
-    position: relative;
-    padding: 20px;
-    margin: 5px 0;
+*{
+    text-decoration: none;
     list-style-type: none;
 }
 
-.nav-topo ul li a{
-    text-decoration: none;
-    color: #000;
-    font-weight: 700;
-    font-size: 20pt;
-    padding: 5px 10px;
+body{
+    background-color: #8491a3;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Pompiere';
+    background: url(image/novo-header-img-1400.jpg) no-repeat;
 }
 
-.nav-topo a:hover{
-    color: #e4818b;
-    border-bottom: 1px solid #ec98a0;
+:root{
+    --font-primary:"Dancing Script", serif;
+    --font-secundary:"Barlow Condense", serif;
+    
+
+}
+
+header{
+    position: relative;
+    height: 100vh;
+}
+
+/*Menu Hamburguer*/
+.hamburguer{
+    width: 2rem;
+    height: 2rem;
+    position: fixed;
+    z-index: 100;
+    right: 2rem;
+    top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+.show-menu .hamburguer{
+    right: 12rem;
+}
+
+.line{
+    width: 100%;
+    background-color: #fff;
+    height: .1rem;
+    box-shadow: .1rem .1rem 5px #000;
+    transition: transform 0.9s;
+}
+
+.show-menu #line1{
+    -webkit-transform: rotateZ(45deg) scaleX(1.4) translate(4px, 4px);
+    transform: rotateZ(45deg) scaleX(1.4) translate(4px, 4px);
+    width: 1rem;
+}
+
+.show-menu #line2{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.show-menu #line3{
+    -webkit-transform: rotateZ(-45deg) scaleX(-1.4) translate(-.4px, -.4px);
+    transform: rotateZ(-45deg) scaleX(-1.4) translate(-4px,-4px);
+    transition: 1s;
+    width: 1rem;
+}
+
+.hamburguer span{
+    background-color: #560000;
+    position: absolute;
+    left: 3rem;
+    width: 6rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-family: var(--font-secundary);
+    font-size: 15pt;
+    opacity: 0;
+}
+
+.hamburguer span::before {
+    content: "";
+    position: absolute;
+    border-right: .5rem solid #560000;
+    border-top: .5rem solid transparent;
+    border-left: .5rem solid transparent;
+    border-bottom: .5rem solid transparent;;
+    left: -1rem;
+}
+
+.show-menu .hamburguer:hover span {
+    opacity: 1;
+}
+
+header{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
 }
 
 /*ÁREA DA LOGO*/
@@ -50,41 +113,85 @@ header{
 #logo-site{
     justify-content: center;
     margin: auto;
-    height: 700px;
+    height: 100vh;
     text-align: center;
     margin-top: 100px;
+    position: relative;
+}
+
+/*Menu Interno*/
+.sidebar{
+    width: 15rem;
+    height: 50%;
+    background-color: #6e7d9277;
+    border-radius: 0 0 50% 50%;
+    position: fixed;
+    top: 0;
+    right: -15rem;
+    transition: all 1s;
+}
+
+.show-menu .sidebar{
+    right: 0;
+}
+
+.menu{
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    transform: translate(-50%,-50%);
+}
+
+.menu-item{
+    text-align: center;
+    margin-bottom: .5rem;
+}
+
+.menu-link{
+    font-family: var(--font-secundary);
+    color: #fff;
+    transition: color 1s;
+}
+
+.menu-link:hover{
+    color: #a37c7c
 }
 
 /*ÁREA CONTEUDISTA GERAL*/
 
 #conteudo{
-    background: #fff;
+    background: none;
     margin: 0;
-    padding: 30px;
+    padding: 0;
     text-align: center;
     justify-content: center;
-    box-shadow: 2px 2px 15px #e4969e;
 }
 
 #conteudo h1{
-    font-size: 35pt;
-    font-weight: 700;
-    color: #cc1e25;
+    font-size: 45pt;
+    font-family: var(--font-primary);
+    color: #1c3144;
+    background: blue;
+    display: inline;
+    padding: 0;
+    margin: 5px;
+    justify-content: center;
+    text-align: center;
 }
 
 /*CONFIGURAÇÕES DA SESSÃO 'SOBRE'*/
 
 .area-sobre{
-    height: 600px;
+    height: 100%;
+    width: 100%;
     display: flex;
-    padding: 50px;
     justify-content: center;
 }
 
 #foto-sobre{
     width: 200px;
     height: 450px;
-    background: #cc1e25;
+    background: #560000;
     background-image: url(image/fundo-header.png);
     box-shadow: 2px 2px 15px #000;
     opacity: 0.8;

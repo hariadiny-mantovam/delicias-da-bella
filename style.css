@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Dancing+Script:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 *{
     margin: 0;
@@ -11,7 +12,7 @@
 
 :root{
     --font-primary:"Dancing Script", serif;
-    --font-secundary:"Barlow Condensed", sans-serif;
+    --font-secundary:"Roboto", sans-serif;
 }
 
 header{
@@ -41,14 +42,13 @@ header{
 
 .banner{
     position: absolute;
-    top: 50%;
-    left: 40%;
-
-
+    top: 40%;
+    left: 30%;
+    margin: 20px;
 }
 
 .banner h1{
-    color: #271d13;
+    color: #cc1e25;
     font-size: 3.5rem;
     font-family: var(--font-primary);
     justify-content: center;
@@ -57,114 +57,130 @@ header{
 }
 
 .banner p{
-    color: #000;
-    font-size: 1.6rem;
+    color: #271d13;
+    font-size: 1.4rem;
+    font-weight: 700;
     font-family: var(--font-secundary);
 }
 
 .banner button{
+    position: relative;
+    width: 130px;
+    background-color: #FFBD00;
+    margin-top: 30px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgb(80, 73, 73);
     align-items: center;
-    justify-content: center;
-    
+    text-align: center;
+    justify-content: center;  
+    left: 50%;
 }
 
-/*ÁREA DA LOGO*/
+.banner button a{
+    color: #fff;
+    font-family: var(--font-secundary);
+    font-size: 12pt;
+    text-transform: uppercase;
+}
 
-#logo-site{
-    top: 50px;
-    left: 0;
-    position: absolute;
-    justify-content: left;
+.banner button:hover{
+    background-color: #d49c02;
 }
 
 /*Menu Interno*/
 .sidebar{
     width: 100%;
-    height: 60px;
-    background-color: rgb(219, 166, 166);
+    height: 90px;
+    background-color: rgba(255, 255, 255);
     position: fixed;
-    top: 0;  
+    box-shadow: 2px 2px 6px #55454567 ;
+    top: 0; 
 }
 
 .menu{
     position: absolute;
     display: flex;
     right: 0;
-    top: 0;
-    padding: 5px;
-    
+    top: 5px;
+    justify-content: center;
+    align-items: center;
 }
 
 .menu-item{
+    margin-top: 5px;
+    margin-left: 10px;
     padding: 10px;
     text-align: center;
 }
 
 .menu-link{
+    width: 200px;
     font-family: var(--font-secundary);
-    color: #fff;
-    font-size: 18pt;
+    color: #cc1e25;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 11pt;
     transition: color 0.5s;
+    padding: 5px;
 }
 
 .menu-link:hover{
-    color: #86bdba;
+    color: #e4818b;
+}
+
+/*ÁREA DA LOGO*/
+
+#logo-site{
+    top: 0;
+    left: 0;
+    padding: 5px;
+    position: fixed;
 }
 
 /*ÁREA CONTEUDISTA GERAL*/
 
 #conteudo{
-    background: #fff;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    justify-content: center;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
 }
 
 #conteudo h1{
-    font-size: 45pt;
-    font-family: var(--font-primary);
-    color: #1c3144;
-    display: inline;
-    padding: 0;
-    margin: 5px;
     justify-content: center;
     text-align: center;
+    font-family: var(--font-primary);
+    font-size: 25pt;
+    color: #cc1e25; 
+}
+
+#conteudo p{
+    justify-content: center;
+    text-align: center;
+    font-family: var(--font-secundary);
+    font-size: 12pt;
 }
 
 /*CONFIGURAÇÕES DA SESSÃO 'SOBRE'*/
 
-.area-sobre{
+#area-sobre{
     height: 100vh;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    
-}
-
-#foto-sobre{
-    width: 200px;
-    height: 450px;
-    margin-bottom: 50%;
-    background: #560000;
-    background-image: url(image/fundo-header.png);
-    box-shadow: 2px 2px 15px #000;
-    opacity: 0.8;
+    overflow: hidden;
+    position: relative;
 }
 
 .conteudo-sobre{
-    background: #f5dcde;
-    width: 50%;
-    margin-top: 10px;
+    background: red;
+    width: 600px;
     height: 450px;
-    box-shadow: 2px 3px 20px rgb(156, 140, 140);
+    margin: auto;
+    top: 100px;
+    border-radius: 5px;
+    position: relative;
 }
 
-.conteudo-sobre p{
-    text-align: justify;
-    padding: 20px;
-    font-size: 18pt;
-}
+
 
 /*CONFIGURAÇÕES DA SESSÃO 'SHOP'*/
 
